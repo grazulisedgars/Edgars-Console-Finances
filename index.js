@@ -96,6 +96,7 @@ console.log("Total months: " + finances.length);
 
 
 // The net total amount of Profit/Losses over the entire period.
+// Used Dans' example code from the lesson:
 
 var totalProfitLosses = 0;
 
@@ -111,5 +112,17 @@ console.log("Total " + totalProfitLosses);
 
 
 // The greatest increase in profits (date and amount) over the entire period.
+// Used Dans' example code from the lesson: although the answer doesn't match the one in assignment.
+
+var maxNumber = 0;
+var maxMonth = ' ';
+
+for (var i = 0; i < finances.length; i++) {
+  if (finances[i][1] > maxNumber) {
+    maxNumber = finances[i][1];
+    maxMonth = finances[i][0];
+  }
+}
+console.log("Greatest increase in profits " + maxMonth + " " + maxNumber);
 
 // The greatest decrease in losses (date and amount) over the entire period.
