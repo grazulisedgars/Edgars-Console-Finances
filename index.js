@@ -90,21 +90,25 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-
-
 // The total number of months included in the dataset.
 
 console.log("Total months: " + finances.length);
 
 
-
 // The net total amount of Profit/Losses over the entire period.
+
+var totalProfitLosses = 0;
+
+for (var i = 0; i < finances.length; i++) {
+  totalProfitLosses += finances[i][1];
+}
+console.log("Total " + totalProfitLosses);
+
 
 // The average of the changes in Profit/Losses over the entire period.
 
 // You will need to track what the total change in profits is from month to month and then find the average.
 
-// (Total/(Number of months - 1))
 
 // The greatest increase in profits (date and amount) over the entire period.
 
