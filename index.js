@@ -112,7 +112,7 @@ console.log("Total " + totalProfitLosses);
 
 
 // The greatest increase in profits (date and amount) over the entire period.
-// Used Dans' example code from the lesson: although the answer doesn't match the one in assignment.
+// Used Dans' example code from the lesson: although the answer doesn't match the one in assignment. The month is right but amount is wrong.
 
 var maxNumber = 0;
 var maxMonth = ' ';
@@ -126,3 +126,15 @@ for (var i = 0; i < finances.length; i++) {
 console.log("Greatest increase in profits " + maxMonth + " " + maxNumber);
 
 // The greatest decrease in losses (date and amount) over the entire period.
+// Used Dans' example code from the lesson: although the answer doesn't match the one in assignment. The month is right but amount is wrong.
+
+var minNumber = 0;
+var minMonth = ' ';
+
+for (var i = 0; i < finances.length; i++) {
+  if (finances[i][1] < minNumber) {
+    minNumber = finances[i][1];
+    minMonth = finances[i][0];
+  }
+}
+console.log("Greatest decrease in profits " + minMonth + " " + minNumber);
