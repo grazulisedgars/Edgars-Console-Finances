@@ -107,6 +107,24 @@ console.log("Total " + totalProfitLosses);
 
 
 // The average of the changes in Profit/Losses over the entire period.
+// Used Dans' example code from the lesson:
+
+var totalChange = 0;
+var countOfChanges = 0;
+
+for (var i = 1; i < finances.length; i++) {
+  var numberWeTakeFrom = finances[i][1];
+  var numberWeTakeOff = finances[i - 1][1];
+  var numberWeAfter = numberWeTakeFrom - numberWeTakeOff;
+
+  totalChange = totalChange + numberWeAfter;
+  countOfChanges++;
+
+}
+
+var averageChanges = totalChange / countOfChanges;
+
+console.log("The average of changes " + averageChanges.toFixed(2));
 
 // You will need to track what the total change in profits is from month to month and then find the average.
 
